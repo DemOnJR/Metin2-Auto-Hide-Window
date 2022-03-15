@@ -1,0 +1,1 @@
+#define __BL_WINDOW_AUTO_HIDE__
