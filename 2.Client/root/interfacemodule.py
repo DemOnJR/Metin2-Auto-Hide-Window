@@ -27,8 +27,8 @@
 				(xCurrentMinimap, yCurrentMinimap) = self.wndMiniMap.GetLocalPosition()
 				if (xWidth - 150 <= xMouse <= xWidth and 0 <= yMouse <= 135) or \
 						constInfo.AUTO_HIDE_OPTION == False:
-					if xCurrentMinimap > xWidth - 135:
-						self.wndMiniMap.SetPosition(max(xCurrentMinimap - 10, xWidth - 135), yCurrentMinimap)
+					if xCurrentMinimap > xWidth - self.wndMiniMap.GetWidth():
+						self.wndMiniMap.SetPosition(max(xCurrentMinimap - 10, xWidth - self.wndMiniMap.GetWidth()), yCurrentMinimap)
 				else:
 					if xCurrentMinimap < xWidth:
 						self.wndMiniMap.SetPosition(min(xCurrentMinimap + 10, xWidth), yCurrentMinimap)
